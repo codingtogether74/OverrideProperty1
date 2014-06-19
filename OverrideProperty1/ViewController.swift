@@ -8,6 +8,7 @@
 
 import UIKit
 
+// A class representing  card.
 class Card{
     var contents: String
     var isChosen: Bool = false
@@ -85,9 +86,13 @@ class PlayingCard: Card {
     
     
 }
+
+// Test overriding property contents in PlayingCard (classes are NOT in separate files)
+
 class ViewController: UIViewController {
                             
     @IBOutlet var contentsLabel: UILabel
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -98,10 +103,7 @@ class ViewController: UIViewController {
 
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
 
 
 }
