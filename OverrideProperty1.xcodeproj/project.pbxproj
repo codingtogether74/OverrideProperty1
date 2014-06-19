@@ -34,6 +34,7 @@
 		E425832E1952AC8E00A3F484 /* OverrideProperty1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OverrideProperty1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42583331952AC8E00A3F484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42583341952AC8E00A3F484 /* OverrideProperty1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideProperty1Tests.swift; sourceTree = "<group>"; };
+		E425833E1952AE0800A3F484 /* OverrideProperty1Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OverrideProperty1Playground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +76,7 @@
 		E425831E1952AC8E00A3F484 /* OverrideProperty1 */ = {
 			isa = PBXGroup;
 			children = (
-				E42583211952AC8E00A3F484 /* AppDelegate.swift */,
+				E425833E1952AE0800A3F484 /* OverrideProperty1Playground.playground */,
 				E42583231952AC8E00A3F484 /* ViewController.swift */,
 				E42583251952AC8E00A3F484 /* Main.storyboard */,
 				E42583281952AC8E00A3F484 /* Images.xcassets */,
@@ -87,6 +88,7 @@
 		E425831F1952AC8E00A3F484 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E42583211952AC8E00A3F484 /* AppDelegate.swift */,
 				E42583201952AC8E00A3F484 /* Info.plist */,
 			);
 			name = "Supporting Files";
