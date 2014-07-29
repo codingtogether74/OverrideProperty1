@@ -12,6 +12,7 @@
 		E42583271952AC8E00A3F484 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42583251952AC8E00A3F484 /* Main.storyboard */; };
 		E42583291952AC8E00A3F484 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E42583281952AC8E00A3F484 /* Images.xcassets */; };
 		E42583351952AC8E00A3F484 /* OverrideProperty1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42583341952AC8E00A3F484 /* OverrideProperty1Tests.swift */; };
+		E4899EF81956E2E40085BF0E /* SwiftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4899EF71956E2E40085BF0E /* SwiftButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +36,7 @@
 		E42583331952AC8E00A3F484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42583341952AC8E00A3F484 /* OverrideProperty1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideProperty1Tests.swift; sourceTree = "<group>"; };
 		E425833E1952AE0800A3F484 /* OverrideProperty1Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OverrideProperty1Playground.playground; sourceTree = "<group>"; };
+		E4899EF71956E2E40085BF0E /* SwiftButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				E425833E1952AE0800A3F484 /* OverrideProperty1Playground.playground */,
 				E42583231952AC8E00A3F484 /* ViewController.swift */,
 				E42583251952AC8E00A3F484 /* Main.storyboard */,
+				E4899EF71956E2E40085BF0E /* SwiftButton.swift */,
 				E42583281952AC8E00A3F484 /* Images.xcassets */,
 				E425831F1952AC8E00A3F484 /* Supporting Files */,
 			);
@@ -212,6 +215,7 @@
 			files = (
 				E42583241952AC8E00A3F484 /* ViewController.swift in Sources */,
 				E42583221952AC8E00A3F484 /* AppDelegate.swift in Sources */,
+				E4899EF81956E2E40085BF0E /* SwiftButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +403,7 @@
 				E425833A1952AC8E00A3F484 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E425833B1952AC8E00A3F484 /* Build configuration list for PBXNativeTarget "OverrideProperty1Tests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +412,7 @@
 				E425833D1952AC8E00A3F484 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

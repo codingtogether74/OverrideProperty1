@@ -22,7 +22,6 @@ class Card{
     {
         return self.contents;
     }
-    
 }
 
 // A class representing Playing card.
@@ -69,13 +68,13 @@ class PlayingCard: Card {
         
     }
     
-    class func rankStrings() -> String[] {
+    class func rankStrings() -> [String] {
         
         return  ["?", "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
         
     }
     
-    class func validSuits() -> String[] {
+    class func validSuits() -> [String] {
         return ["♥️", "♦️", "♠️", "♣️"]
     }
     
@@ -91,8 +90,9 @@ class PlayingCard: Card {
 
 class ViewController: UIViewController {
                             
-    @IBOutlet var contentsLabel: UILabel
+    @IBOutlet var contentsLabel: UILabel!
     
+    @IBOutlet var swiftButton: SwiftButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -100,6 +100,7 @@ class ViewController: UIViewController {
         var card2Befor = pcard2.contents
         pcard2.rank = 10
         contentsLabel.text = card2Befor + " " + pcard2.contents
+      swiftButton.highlighted = true
 
     }
 
