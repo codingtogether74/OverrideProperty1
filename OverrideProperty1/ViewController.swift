@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 // A class representing  card.
 class Card{
@@ -86,6 +87,12 @@ class PlayingCard: Card {
     
 }
 
+extension String {
+    func toEnum<Enum: RawRepresentable where Enum.RawValue == String>() -> Enum? {
+        return Enum(rawValue: self)
+    }
+}
+
 // Test overriding property contents in PlayingCard (classes are NOT in separate files)
 
 class ViewController: UIViewController {
@@ -93,6 +100,28 @@ class ViewController: UIViewController {
     @IBOutlet var contentsLabel: UILabel!
     
     @IBOutlet var swiftButton: SwiftButton!
+    
+    enum SegueIdentifier: String {
+        case SegueToRedViewIdentifier = "SegueToRedViewIdentifier"
+        case SegueToGreenViewIdentifier = "SegueToGreenViewIdentifier"
+        case SegueToBlueViewIdentifier = "SegueToBlueViewIdentifier"
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let y: SegueIdentifier? = segue.identifier?.toEnum()
+        if let segueIdentifier =  y {
+            
+            switch segueIdentifier {
+            case .SegueToRedViewIdentifier:
+                println("red")
+            case .SegueToGreenViewIdentifier:
+                println("green")
+            case .SegueToBlueViewIdentifier:
+                println("blue")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -101,11 +130,8 @@ class ViewController: UIViewController {
         pcard2.rank = 10
         contentsLabel.text = card2Befor + " " + pcard2.contents
       swiftButton.highlighted = true
-
+        var dd:String! = "ddd"
+        let a = 1...5
     }
-
-
-
-
 }
 

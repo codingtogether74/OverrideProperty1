@@ -26,6 +26,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E40116D51A0FBE9C00D93E07 /* OverProperty1.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OverProperty1.playground; sourceTree = "<group>"; };
 		E425831C1952AC8E00A3F484 /* OverrideProperty1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OverrideProperty1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42583201952AC8E00A3F484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42583211952AC8E00A3F484 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,8 +36,9 @@
 		E425832E1952AC8E00A3F484 /* OverrideProperty1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OverrideProperty1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E42583331952AC8E00A3F484 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E42583341952AC8E00A3F484 /* OverrideProperty1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverrideProperty1Tests.swift; sourceTree = "<group>"; };
-		E425833E1952AE0800A3F484 /* OverrideProperty1Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = OverrideProperty1Playground.playground; sourceTree = "<group>"; };
 		E4899EF71956E2E40085BF0E /* SwiftButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftButton.swift; sourceTree = "<group>"; };
+		E4EE39151A0BF9D70038DDB9 /* TrailingClosure.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = TrailingClosure.playground; sourceTree = "<group>"; };
+		E4EE39161A0D01EC0038DDB9 /* NSURLSession.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NSURLSession.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +80,9 @@
 		E425831E1952AC8E00A3F484 /* OverrideProperty1 */ = {
 			isa = PBXGroup;
 			children = (
-				E425833E1952AE0800A3F484 /* OverrideProperty1Playground.playground */,
+				E40116D51A0FBE9C00D93E07 /* OverProperty1.playground */,
+				E4EE39161A0D01EC0038DDB9 /* NSURLSession.playground */,
+				E4EE39151A0BF9D70038DDB9 /* TrailingClosure.playground */,
 				E42583231952AC8E00A3F484 /* ViewController.swift */,
 				E42583251952AC8E00A3F484 /* Main.storyboard */,
 				E4899EF71956E2E40085BF0E /* SwiftButton.swift */,
