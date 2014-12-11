@@ -308,7 +308,13 @@ let corruptJson = asJSONData("a\",[\"Animal\",\"Association football\",\"Arthrop
 
 pagesFromData(corruptJson).description
 
-//======
+//==============================
+//Хранилище для closures
+// https://devforums.apple.com/message/1036183#1036183
+//ClosureMap below acts like a dictionary where the keys are classes
+//and the values are closures that take instances of the keys as parameters. 
+//The trick was to cast a box class, ClosureHolder<T>, instead the closures themselves.
+
 private struct ClosureHolder<T> {
     let closure: T -> Void
     init(_ closure: T -> Void) {
@@ -356,7 +362,7 @@ func closureTest() {
     closures.get(Email.self)?(Email())  // "email subject"
     closures.get(SMS.self)?(SMS())      // "sms message"
     
-    closures.get()?(Email())    // "email message"
+    closures.get()?(Email())    // "email subject"
     closures.get()?(SMS())      // "sms message
 }
 closureTest()
@@ -378,6 +384,7 @@ let r = 1..<6
 contains (r,3)
 
 let integer_interval: ClosedInterval = 1...5
+integer_interval.contains(3)
 
 extension Int {
     func times(block: () -> Void) {
@@ -447,7 +454,96 @@ let x: String? = "Foo"
 
 let y: Segue? = x?.toEnum()
 
+let ww = stride(from: 1, through: 10, by: 5)
+
+for i in lazy(0...5).reverse() {
+    println(i)// 5, 4, 3, 2, 1, 0
+}
+let vv = Range(start: 5, end: 1)
+
+func helloWithNames(names: String...) {
+    for name in names {
+        println("Hello, \(name)")
+    }
+}
+
+// 2 names
+helloWithNames("Mr. Robot", "Mr. Potato")
+
+func findRangeFromNumbers(numbers: Int...) -> (min: Int, max: Int) {
+    
+    var min = numbers[0]
+    var max = numbers[0]
+    
+    for number in numbers {
+        if number > max {
+            max = number
+        }
+        
+        if number < min {
+            min = number
+        }
+    }
+    
+    return (min, max)
+}
+
+let range = findRangeFromNumbers(1, 234, 555, 345, 423)
+println("From numbers: 1, 234, 555, 345, 423. The min is \(range.min). The max is \(range.max).")
+// From numbers: 1, 234, 555, 345, 423. The min is 1. The max is 555.
+
+let (min, max) = findRangeFromNumbers(236, 8, 38, 937, 328)
+println("From numbers: 236, 8, 38, 937, 328. The min is \(min). The max is \(max)")
+// From numbers: 236, 8, 38, 937, 328. The min is 8. The max is 937
+
+func add (a1:Int, a2:Int) ->Int {return (a1 + a2)}
+func multiply (a1:Int, a2:Int) ->Int {return (a1 * a2)}
+
+func funcReturnFunc (funcOperation: (Int,Int) -> Int) -> (Int, Int) ->Int {
+   
+    return  funcOperation
+}
+
+func funcReturnFunc2 (funcOperation: (Int,Int) -> Int) -> (Int, Int) ->Int {
+    return funcReturnFunc(funcOperation)
+}
+
+let returnedFunction = funcReturnFunc2 (multiply)
+let returnedFunction1 = funcReturnFunc2 (add)
 
 
+returnedFunction(5,6)
+returnedFunction1(5,6)
+
+func chained (i:Int) -> Int-> Int -> Int {
+    return { j in
+        return { k in
+            return i + j + k;
+        }
+    }
+}
+chained(5)(6)(7)
+
+func add1 (a:Int) -> Int-> Int {
+    return {b in
+        return a + b
+    }
+}
+
+add1(3)(4)
+
+let add3 = add1(3)
+add3(4)
+//======
+// Использовались материалы http://habrahabr.ru/post/241303/#first_unread
+
+func performOperation(op1: Double, op2: Double, operation: (Double, Double) -> Double) -> Double {
+    return operation(op1, op2)
+}
 
 
+let operationDictionary: Dictionary<String, (Double, Double) -> Double > = [ "+": {$0 + $1} , "x": {$0 * $1}, "-": {$0 - $1}]
+var symbolOperation:String = "-"
+
+if let operation = operationDictionary[symbolOperation] {
+    performOperation(3.0, 2.0, operation)}

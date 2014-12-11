@@ -129,9 +129,9 @@ class ViewController: UIViewController {
         var card2Befor = pcard2.contents
         pcard2.rank = 10
         contentsLabel.text = card2Befor + " " + pcard2.contents
-      swiftButton.highlighted = true
-        var dd:String! = "ddd"
-        let a = 1...5
+        swiftButton.highlighted = true
+        sorted([5, 7, 3], <)
+
     }
 }
 
